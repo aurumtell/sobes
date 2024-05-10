@@ -9,13 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="414612c6-3a7b-4152-9643-6e71c4ff976e" name="Changes" comment="first commit">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/repo/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/repo/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/service/UserService.java" afterDir="false" />
-    </list>
+    <list default="true" id="414612c6-3a7b-4152-9643-6e71c4ff976e" name="Changes" comment="first commit" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -91,7 +85,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "MavenSettings",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
     "spring.configuration.checksum": "214fa484f6a1b56862ac4730e82bd49a",
     "vue.rearranger.settings.migration": "true"
   },
@@ -248,7 +242,7 @@
       <workItem from="1713982129597" duration="34531000" />
       <workItem from="1714040535495" duration="608000" />
       <workItem from="1714390013889" duration="55019000" />
-      <workItem from="1715013748840" duration="10871000" />
+      <workItem from="1715013748840" duration="11397000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1713801045986</created>
