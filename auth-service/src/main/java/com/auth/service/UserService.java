@@ -113,7 +113,7 @@ public class UserService {
     }
 
     public List<ProfileResponse> getProfiles() {
-        return ProfileResponse.toProfileList(userRepository.findAll());
+        return ProfileResponse.toProfileList(userRepository.findAllByVerified(true));
     }
 
 //    public ProfileResponse updateProfessions(ProfileRequest profileRequest, UserDetailsImpl user) {

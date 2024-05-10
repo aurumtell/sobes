@@ -10,148 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="414612c6-3a7b-4152-9643-6e71c4ff976e" name="Changes" comment="first commit">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/auth_service_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/ProfileService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/controller/UserController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/model/entity/CompanyEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/model/entity/LevelEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/model/entity/ProfessionEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/model/request/EmailRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/model/request/ProfileRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/model/request/ResetRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/model/request/VerificationRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/model/response/ProfileResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/repo/CompanyRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/repo/LevelRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/repo/ProfessionRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/security/MailConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/service/EmailService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/auth-service/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/config/WebSocketConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/controller/ChatController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/model/entity/ChatEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/model/entity/CompanyEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/model/entity/LevelEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/model/entity/MessageEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/model/entity/ProfessionEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/model/entity/UserEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/model/request/Message.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/model/response/MessageResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/repo/ChatRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/repo/MessageRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/repo/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/service/MessageService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/resources/db.changelog/liquidbase-changeLog.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-service/src/main/java/com/content/controller/ContentController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-service/src/main/java/com/content/model/entity/AdviseEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-service/src/main/java/com/content/model/entity/ArticleEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-service/src/main/java/com/content/model/entity/CompanyEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-service/src/main/java/com/content/model/entity/ProfessionEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-service/src/main/java/com/content/model/entity/UserEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-service/src/main/java/com/content/model/response/AdviseResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-service/src/main/java/com/content/model/response/ArticleResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-service/src/main/java/com/content/repo/AdviseRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-service/src/main/java/com/content/repo/ArticleRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-service/src/main/java/com/content/repo/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-service/src/main/java/com/content/security/AuthEntryPointJwt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-service/src/main/java/com/content/security/AuthTokenFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-service/src/main/java/com/content/security/JwtUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-service/src/main/java/com/content/security/WebSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-service/src/main/java/com/content/security/services/UserDetailsImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-service/src/main/java/com/content/security/services/UserDetailsServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-service/src/main/java/com/content/service/ArticleAdviseService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-service/src/main/java/com/content/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-service/src/main/resources/db.changelog/liquidbase-changeLog.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-service/src/main/java/com/hse/config/RoutingConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gateway-service/src/main/resources/application.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interview-service/src/main/java/com/interview/InterviewService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interview-service/src/main/java/com/interview/controller/InterviewController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interview-service/src/main/java/com/interview/exception/AuthorizationException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interview-service/src/main/java/com/interview/exception/BusinessException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interview-service/src/main/java/com/interview/exception/ErrorMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interview-service/src/main/java/com/interview/exception/ExceptionMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interview-service/src/main/java/com/interview/exception/ExpiredJwtException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interview-service/src/main/java/com/interview/exception/MyEntityNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interview-service/src/main/java/com/interview/exception/TokenRefreshException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interview-service/src/main/java/com/interview/interfaces/YandexGPTClient.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interview-service/src/main/java/com/interview/model/entity/AnswerEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interview-service/src/main/java/com/interview/model/entity/ProfessionEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interview-service/src/main/java/com/interview/model/entity/QuestionEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interview-service/src/main/java/com/interview/model/entity/Statistic.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interview-service/src/main/java/com/interview/model/entity/UserEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interview-service/src/main/java/com/interview/model/request/AnswerRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interview-service/src/main/java/com/interview/model/request/ChatRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interview-service/src/main/java/com/interview/model/request/DialogRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interview-service/src/main/java/com/interview/model/request/MessageRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interview-service/src/main/java/com/interview/model/response/AnswerResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interview-service/src/main/java/com/interview/model/response/ChatResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interview-service/src/main/java/com/interview/model/response/GenerateResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interview-service/src/main/java/com/interview/model/response/QuestionResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interview-service/src/main/java/com/interview/repo/AnswerRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interview-service/src/main/java/com/interview/repo/ProfessionRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interview-service/src/main/java/com/interview/repo/QuestionRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interview-service/src/main/java/com/interview/repo/UserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interview-service/src/main/java/com/interview/security/AuthEntryPointJwt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interview-service/src/main/java/com/interview/security/AuthTokenFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interview-service/src/main/java/com/interview/security/JwtUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interview-service/src/main/java/com/interview/security/WebSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interview-service/src/main/java/com/interview/security/services/UserDetailsImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interview-service/src/main/java/com/interview/security/services/UserDetailsServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interview-service/src/main/java/com/interview/service/QuestionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interview-service/src/main/java/com/interview/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interview-service/src/main/java/com/interview/service/YandexGPTService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interview-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/interview-service/src/main/resources/db.changelog/liquidbase-changeLog.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/hse/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/content-service/src/main/java/com/content/ContentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/hse/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/controller/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/hse/exception/AuthorizationException.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/exception/AuthorizationException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/hse/exception/BusinessException.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/exception/BusinessException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/hse/exception/ErrorMessage.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/exception/ErrorMessage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/hse/exception/ExceptionMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/exception/ExceptionMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/hse/exception/ExpiredJwtException.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/exception/ExpiredJwtException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/hse/exception/MyEntityNotFoundException.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/exception/MyEntityNotFoundException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/hse/exception/TokenRefreshException.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/exception/TokenRefreshException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/hse/model/entity/RefreshToken.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/model/entity/RefreshToken.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/hse/model/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/model/entity/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/hse/model/request/AuthRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/model/request/AuthRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/hse/model/request/SignUpRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/model/request/SignUpRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/hse/model/request/TokenRefreshRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/model/request/TokenRefreshRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/hse/model/response/AccessTokenResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/model/response/AccessTokenResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/hse/model/response/JwtResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/model/response/JwtResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/hse/model/response/MessageResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/model/response/MessageResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/hse/model/response/TokenRefreshResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/model/response/TokenRefreshResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/hse/repo/RefreshRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/repo/RefreshRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/hse/repo/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/repo/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/hse/security/OpenApiConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/security/OpenApiConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/hse/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/security/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/hse/security/jwt/AuthEntryPointJwt.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/security/jwt/AuthEntryPointJwt.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/hse/security/jwt/AuthTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/security/jwt/AuthTokenFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/hse/security/jwt/JwtUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/security/jwt/JwtUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/hse/security/services/UserDetailsImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/security/services/UserDetailsImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/hse/security/services/UserDetailsServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/security/services/UserDetailsServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/hse/service/AuthService.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/service/AuthService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/hse/service/RefreshTokenService.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/service/RefreshTokenService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/resources/db.changelog/liquidbase-changeLog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/resources/db.changelog/liquidbase-changeLog.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/content-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content-service/src/main/java/com/hse/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/ChatService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/com/hse/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/com/hse/GatewayService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interview-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/interview-service/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interview-service/src/main/java/com/hse/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/hse/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/repo/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/repo/UserRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/java/com/auth/service/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -385,7 +248,7 @@
       <workItem from="1713982129597" duration="34531000" />
       <workItem from="1714040535495" duration="608000" />
       <workItem from="1714390013889" duration="55019000" />
-      <workItem from="1715013748840" duration="5707000" />
+      <workItem from="1715013748840" duration="10871000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1713801045986</created>
