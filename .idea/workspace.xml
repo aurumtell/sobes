@@ -9,7 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="414612c6-3a7b-4152-9643-6e71c4ff976e" name="Changes" comment="first commit" />
+    <list default="true" id="414612c6-3a7b-4152-9643-6e71c4ff976e" name="Changes" comment="first commit">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -242,7 +245,7 @@
       <workItem from="1713982129597" duration="34531000" />
       <workItem from="1714040535495" duration="608000" />
       <workItem from="1714390013889" duration="55019000" />
-      <workItem from="1715013748840" duration="11397000" />
+      <workItem from="1715013748840" duration="12519000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1713801045986</created>
