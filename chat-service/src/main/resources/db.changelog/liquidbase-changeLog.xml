@@ -227,7 +227,6 @@
                                                     chatId INTEGER NOT NULL,
                                                     senderId INTEGER NOT NULL,
                                                     content TEXT,
-                                                    isRead BOOLEAN,
                                                     dateMessage TIMESTAMP(0) WITHOUT TIME ZONE DEFAULT NOW(),
                 FOREIGN KEY (chatId) REFERENCES chats(id),
                 FOREIGN KEY (senderId) REFERENCES users(id)

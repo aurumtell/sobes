@@ -10,32 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="414612c6-3a7b-4152-9643-6e71c4ff976e" name="Changes" comment="first commit">
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/controller/WebSocketController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/exception/AuthorizationException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/exception/BusinessException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/exception/ErrorMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/exception/ExceptionMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/exception/ExpiredJwtException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/exception/MyEntityNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/exception/TokenRefreshException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/model/response/ChatResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/model/response/ExceptionResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/security/WebSocketAuthInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/resources/static/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/ChatService.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/ChatService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/config/WebSocketConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/config/WebSocketConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/controller/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/controller/ChatController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/model/entity/ChatEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/model/entity/ChatEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/model/entity/MessageEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/model/entity/MessageEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/model/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/model/entity/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/model/response/MessageResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/model/response/MessageResponse.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/repo/ChatRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/repo/ChatRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/repo/MessageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/repo/MessageRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/security/WebSecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/security/jwt/AuthTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/security/jwt/AuthTokenFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/security/jwt/JwtHandshakeInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/security/jwt/JwtHandshakeInterceptor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/service/MessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/service/MessageService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-service/src/main/resources/db.changelog/liquidbase-changeLog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/resources/db.changelog/liquidbase-changeLog.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content-service/src/main/resources/db.changelog/liquidbase-changeLog.xml" beforeDir="false" afterPath="$PROJECT_DIR$/content-service/src/main/resources/db.changelog/liquidbase-changeLog.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/com/hse/config/RoutingConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/com/hse/config/RoutingConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -273,7 +252,7 @@
       <workItem from="1714040535495" duration="608000" />
       <workItem from="1714390013889" duration="55019000" />
       <workItem from="1715013748840" duration="29747000" />
-      <workItem from="1715520463109" duration="1773000" />
+      <workItem from="1715520463109" duration="2778000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1713801045986</created>
