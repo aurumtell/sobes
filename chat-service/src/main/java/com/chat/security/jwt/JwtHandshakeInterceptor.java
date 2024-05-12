@@ -7,13 +7,12 @@ import org.springframework.http.server.ServerHttpResponse;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
-import org.springframework.security.web.authentication.WebAuthenticationDetailsSource;
 import org.springframework.web.socket.server.HandshakeInterceptor;
 
 import java.util.Map;
 
 public class JwtHandshakeInterceptor implements HandshakeInterceptor {
-    private final JwtUtils jwtUtils;
+    private final com.chat.security.jwt.JwtUtils jwtUtils;
     private final UserDetailsServiceImpl userDetailsService;
 
     public JwtHandshakeInterceptor(JwtUtils jwtUtils, UserDetailsServiceImpl userDetailsService) {
@@ -35,6 +34,7 @@ public class JwtHandshakeInterceptor implements HandshakeInterceptor {
                         userDetails, null, userDetails.getAuthorities());
                 SecurityContextHolder.getContext().setAuthentication(authentication);
                 attributes.put("username", ((UserDetailsImpl) userDetails).getUsername());
+                System.out.println("jwt socket");
                 return true;
             }
         }

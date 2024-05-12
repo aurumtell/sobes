@@ -10,64 +10,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="414612c6-3a7b-4152-9643-6e71c4ff976e" name="Changes" comment="first commit">
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/security/OpenApiConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/security/WebSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/security/jwt/AuthEntryPointJwt.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/security/jwt/AuthTokenFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/security/jwt/JwtHandshakeInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/security/jwt/JwtUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/security/services/UserDetailsImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/security/services/UserDetailsServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/chat-service/src/main/resources/application.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-service/src/main/java/com/content/model/request/AdviseRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-service/src/main/java/com/content/model/request/ArticleRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-service/src/main/java/com/content/repo/CompanyRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/content-service/src/main/java/com/content/repo/ProfessionRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/controller/WebSocketController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/exception/AuthorizationException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/exception/BusinessException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/exception/ErrorMessage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/exception/ExceptionMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/exception/ExpiredJwtException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/exception/MyEntityNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/exception/TokenRefreshException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/model/response/ChatResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/model/response/ExceptionResponse.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/security/WebSocketAuthInterceptor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/chat-service/src/main/resources/static/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/target/auth-service-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/target/auth-service-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth-service/target/auth-service-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/auth-service/target/auth-service-1.0-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/ChatService.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/ChatService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/config/WebSocketConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/config/WebSocketConfig.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/controller/ChatController.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/controller/ChatController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/model/entity/ChatEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/model/entity/ChatEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/model/entity/MessageEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/model/entity/MessageEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/model/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/model/entity/UserEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/model/request/Message.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/model/request/Message.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/model/response/MessageResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/model/response/MessageResponse.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/repo/ChatRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/repo/ChatRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/repo/MessageRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/repo/MessageRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/security/WebSecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/security/WebSecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/security/jwt/AuthTokenFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/security/jwt/AuthTokenFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/security/jwt/JwtHandshakeInterceptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/security/jwt/JwtHandshakeInterceptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/service/MessageService.java" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/src/main/java/com/chat/service/MessageService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-service/target/chat-service-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/target/chat-service-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-service/target/chat-service-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/target/chat-service-1.0-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-service/target/classes/com/chat/config/WebSocketConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/target/classes/com/chat/config/WebSocketConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-service/target/classes/com/chat/controller/ChatController.class" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/target/classes/com/chat/controller/ChatController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-service/target/classes/com/chat/model/entity/ChatEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/target/classes/com/chat/model/entity/ChatEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-service/target/classes/com/chat/model/entity/UserEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/target/classes/com/chat/model/entity/UserEntity.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-service/target/classes/com/chat/model/request/Message.class" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/target/classes/com/chat/model/request/Message.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-service/target/classes/com/chat/model/response/MessageResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/target/classes/com/chat/model/response/MessageResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-service/target/classes/com/chat/repo/ChatRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/target/classes/com/chat/repo/ChatRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-service/target/classes/com/chat/repo/MessageRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/target/classes/com/chat/repo/MessageRepository.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-service/target/classes/com/chat/service/MessageService.class" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/target/classes/com/chat/service/MessageService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chat-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/chat-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content-service/src/main/java/com/content/controller/ContentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/content-service/src/main/java/com/content/controller/ContentController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content-service/src/main/java/com/content/service/ArticleAdviseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/content-service/src/main/java/com/content/service/ArticleAdviseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/content-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content-service/target/classes/com/content/controller/ContentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/content-service/target/classes/com/content/controller/ContentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content-service/target/classes/com/content/service/ArticleAdviseService.class" beforeDir="false" afterPath="$PROJECT_DIR$/content-service/target/classes/com/content/service/ArticleAdviseService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content-service/target/content-service-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/content-service/target/content-service-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content-service/target/content-service-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/content-service/target/content-service-1.0-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/content-service/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/content-service/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gateway-service/src/main/java/com/hse/config/RoutingConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/src/main/java/com/hse/config/RoutingConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-service/target/classes/com/hse/config/RoutingConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/target/classes/com/hse/config/RoutingConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-service/target/gateway-service-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/target/gateway-service-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway-service/target/gateway-service-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/gateway-service/target/gateway-service-1.0-SNAPSHOT.jar.original" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interview-service/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/interview-service/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interview-service/target/interview-service-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/interview-service/target/interview-service-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/interview-service/target/interview-service-1.0-SNAPSHOT.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/interview-service/target/interview-service-1.0-SNAPSHOT.jar.original" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,43 +92,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;graalvm-jdk-17&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/d.a.tasbauova/IdeaProjects/sobes/content-service/src/main/java/com/content/repo&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
-    &quot;spring.configuration.checksum&quot;: &quot;214fa484f6a1b56862ac4730e82bd49a&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "jdk.selected.JAVA_MODULE": "graalvm-jdk-17",
+    "last_opened_file_path": "/Users/d.a.tasbauova/IdeaProjects/sobes/chat-service/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "spring.configuration.checksum": "214fa484f6a1b56862ac4730e82bd49a",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/content-service/src/main/java/com/content/repo" />
-      <recent name="$PROJECT_DIR$/content-service/src/main/java/com/content/model" />
       <recent name="$PROJECT_DIR$/chat-service/src/main/resources" />
       <recent name="$PROJECT_DIR$/chat-service/src/main/java/com/chat" />
+      <recent name="$PROJECT_DIR$/content-service/src/main/java/com/content/repo" />
+      <recent name="$PROJECT_DIR$/content-service/src/main/java/com/content/model" />
       <recent name="$PROJECT_DIR$/interview-service" />
     </key>
     <key name="ExtractSuperBase.RECENT_KEYS">
@@ -304,7 +273,7 @@
       <workItem from="1714040535495" duration="608000" />
       <workItem from="1714390013889" duration="55019000" />
       <workItem from="1715013748840" duration="29747000" />
-      <workItem from="1715520463109" duration="401000" />
+      <workItem from="1715520463109" duration="1773000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1713801045986</created>

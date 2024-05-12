@@ -1,7 +1,6 @@
 package com.chat.model.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -31,9 +30,6 @@ public class MessageEntity {
 
     @Column(name = "content")
     private String content;
-
-    @Column(name = "isread")
-    private Boolean isRead;
 
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Column(name = "datemessage")

@@ -1,5 +1,6 @@
 package com.chat.service;
 
+import com.chat.exception.BusinessException;
 import com.chat.model.entity.ChatEntity;
 import com.chat.model.entity.MessageEntity;
 import com.chat.model.entity.UserEntity;
@@ -28,16 +29,20 @@ public class MessageService {
     @Autowired
     UserRepository userRepository;
 
-    public MessageService(ChatRepository chatRepository, MessageRepository messageRepository, UserRepository userRepository) {
-        this.chatRepository = chatRepository;
-        this.messageRepository = messageRepository;
-        this.userRepository = userRepository;
-    }
 
     public ChatEntity createChat(Long userId, UserDetailsImpl user) {
+        System.out.println("create chat service");
         ChatEntity chat = new ChatEntity();
-        chat.setParticipantone(userRepository.findById(user.getId()).get());
-        chat.setParticipanttwo(userRepository.findById(userId).get());
+        UserEntity participantOne = userRepository.findById(user.getId()).get();
+        System.out.println(user.getId());
+        System.out.println(participantOne);
+        UserEntity participantTwo = userRepository.findById(userId).get();
+        if (chatRepository.existsByParticipantoneAndParticipanttwo(participantOne, participantTwo)) {
+            throw new BusinessException("Chat already exists!");
+        }
+        chat.setParticipantone(participantOne);
+        chat.setParticipanttwo(participantTwo);
+        System.out.println("chat save");
         return chatRepository.save(chat);
     }
 
@@ -64,6 +69,10 @@ public class MessageService {
 
     private MessageResponse toResponse(MessageEntity message) {
         return new MessageResponse(message);
+    }
+
+    public List<ChatEntity> getChats(UserDetailsImpl user) {
+        return chatRepository.findByParticipantoneOrParticipanttwo(userRepository.findById(user.getId()).get(), userRepository.findById(user.getId()).get());
     }
 }
 

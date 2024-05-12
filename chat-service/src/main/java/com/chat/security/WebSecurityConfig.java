@@ -79,6 +79,7 @@ public class WebSecurityConfig {
                     .authorizeHttpRequests((request) -> request
                             .requestMatchers(AUTH_WHITELIST).permitAll()
                             .requestMatchers("/auth/**").permitAll()
+                            .requestMatchers("/ws/**").permitAll()
                             .anyRequest().authenticated()).cors()
             ;
 

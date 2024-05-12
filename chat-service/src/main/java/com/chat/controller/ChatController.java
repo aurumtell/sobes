@@ -1,30 +1,22 @@
 package com.chat.controller;
 
 import com.chat.model.entity.ChatEntity;
-import com.chat.model.request.Message;
 import com.chat.model.response.MessageResponse;
 import com.chat.security.services.UserDetailsImpl;
-
 import com.chat.service.MessageService;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.messaging.handler.annotation.DestinationVariable;
-import org.springframework.messaging.handler.annotation.MessageMapping;
-import org.springframework.messaging.handler.annotation.Payload;
-import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@Controller
+@RestController
+@SecurityRequirement(name = "Authorization")
 public class ChatController {
 
     @Autowired
-    private MessageService messageService;  // Сервис для работы с сообщениями
+    MessageService messageService;  // Сервис для работы с сообщениями
 
 //    @MessageMapping("/chat")
 //    @SendTo("/topic/messages/{chatId}")
@@ -38,18 +30,19 @@ public class ChatController {
 //    }
 
     @PostMapping(value = "/chat/{userId}")
+    @ResponseBody
     public ChatEntity createChat(@PathVariable Long userId, @AuthenticationPrincipal UserDetailsImpl user) {
+        System.out.println("chat");
         return messageService.createChat(userId, user);
     }
 
-    @MessageMapping("/send")
-    @SendTo("/topic/messages")
-    public MessageResponse sendMessage(Message message) {
-        return messageService.sendMessage(message);
-    }
-
-    @GetMapping("chat/{chatId}/messages")
+    @GetMapping("/chat/{chatId}/messages")
     public List<MessageResponse> getMessages(@PathVariable Long chatId) {
         return messageService.getMessages(chatId);
+    }
+
+    @GetMapping("/chat")
+    public List<ChatEntity> getChats(@AuthenticationPrincipal UserDetailsImpl user) {
+        return messageService.getChats(user);
     }
 }
