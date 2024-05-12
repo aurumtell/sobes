@@ -1,11 +1,16 @@
 package com.content.service;
 
 
+import com.content.model.entity.AdviseEntity;
+import com.content.model.request.AdviseRequest;
+import com.content.model.request.ArticleRequest;
 import com.content.model.response.AdviseResponse;
 import com.content.repo.AdviseRepository;
 import com.content.repo.ArticleRepository;
 import com.content.model.entity.ArticleEntity;
 import com.content.model.response.ArticleResponse;
+import com.content.repo.CompanyRepository;
+import com.content.repo.ProfessionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -24,6 +29,12 @@ public class ArticleAdviseService {
 
     @Autowired
     ArticleRepository articleRepository;
+
+    @Autowired
+    ProfessionRepository professionRepository;
+
+    @Autowired
+    CompanyRepository companyRepository;
 
 //    public ArticleResponse createArticle(ArticleRequest articleRequest, UserDetailsImpl user) {
 //        ArticleEntity articleEntity = new ArticleEntity();
@@ -53,6 +64,26 @@ public class ArticleAdviseService {
     public List<AdviseResponse> getAllAdvise() {
         AdviseResponse adviseResponse = new AdviseResponse();
         return adviseResponse.getListAdviseResponces((adviseRepository.findAll()));
+    }
+
+    public ArticleResponse createArticle(ArticleRequest article) {
+        ArticleEntity articleEntity = new ArticleEntity();
+        articleEntity.setAuthor(article.getAuthor());
+        articleEntity.setContent(article.getContent());
+        articleEntity.setLink(article.getLink());
+        articleEntity.setTitle(article.getTitle());
+        articleEntity.setProfession(professionRepository.findByProfession(article.getProfession()));
+        return new ArticleResponse(articleRepository.save(articleEntity));
+    }
+
+    public AdviseResponse createAdvise(AdviseRequest advise) {
+        AdviseEntity adviseEntity = new AdviseEntity();
+        adviseEntity.setProfession(professionRepository.findByProfession(advise.getProfession()));
+        adviseEntity.setText(advise.getText());
+        adviseEntity.setName(advise.getName());
+        adviseEntity.setLevel(advise.getLevel());
+        adviseEntity.setCompany(companyRepository.findByCompany(advise.getCompany()));
+        return new AdviseResponse(adviseRepository.save(adviseEntity));
     }
 
 //    public List<ArticleResponse> getUserArticle(UserDetailsImpl user) {

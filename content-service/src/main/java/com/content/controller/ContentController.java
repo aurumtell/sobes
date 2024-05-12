@@ -1,6 +1,8 @@
 package com.content.controller;
 
 
+import com.content.model.request.AdviseRequest;
+import com.content.model.request.ArticleRequest;
 import com.content.model.response.AdviseResponse;
 import com.content.model.response.ArticleResponse;
 import com.content.service.ArticleAdviseService;
@@ -8,10 +10,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -38,6 +37,22 @@ public class ContentController {
     @ResponseBody
     public List<ArticleResponse> getAllArticle(){
         return articleAdviseService.getAllArticle();
+    }
+
+    @Operation(summary = "Create article",
+            description = "Create Article")
+    @PostMapping(value = "/user/article")
+    @ResponseBody
+    public ArticleResponse createArticle(@RequestBody ArticleRequest article){
+        return articleAdviseService.createArticle(article);
+    }
+
+    @Operation(summary = "Create advise",
+            description = "Create advise")
+    @PostMapping(value = "/user/advise")
+    @ResponseBody
+    public AdviseResponse createAdvise(@RequestBody AdviseRequest advise){
+        return articleAdviseService.createAdvise(advise);
     }
 
     @Operation(summary = "Get advise",

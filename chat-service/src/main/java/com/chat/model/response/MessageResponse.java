@@ -12,6 +12,7 @@ import java.util.stream.Collectors;
 @Getter
 @Setter
 public class MessageResponse {
+    private Long chatId;
     private LocalDateTime date;
     private UserEntity sender;
     private String text;

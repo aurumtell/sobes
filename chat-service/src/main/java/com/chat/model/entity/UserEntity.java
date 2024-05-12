@@ -46,15 +46,15 @@ public class UserEntity {
     private LevelEntity experience;
     @JsonIgnore
     @OneToMany(mappedBy="participantone", fetch= FetchType.EAGER)
-    private Set<UserEntity> usersOne = new HashSet<>();
+    private Set<ChatEntity> chatsOne = new HashSet<>();
 
     @JsonIgnore
     @OneToMany(mappedBy="participanttwo", fetch= FetchType.EAGER)
-    private Set<UserEntity> usersTwo = new HashSet<>();
+    private Set<ChatEntity> chatsTwo = new HashSet<>();
 
     @JsonIgnore
     @OneToMany(mappedBy="sender", fetch= FetchType.EAGER)
-    private Set<UserEntity> senders = new HashSet<>();
+    private Set<MessageEntity> messages = new HashSet<>();
 
     @Column(name = "verify")
     private boolean verified;
