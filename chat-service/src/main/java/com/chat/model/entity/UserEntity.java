@@ -38,14 +38,14 @@ public class UserEntity {
     @Column(name = "username")
     private String username;
 
-    @JsonIgnore
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    @Column(name = "registrationdate")
-    private LocalDateTime registrationDate;
-
-    @ManyToOne(cascade= CascadeType.MERGE)
-    @JoinColumn(name="levelid")
-    private LevelEntity experience;
+//    @JsonIgnore
+//    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+//    @Column(name = "registrationdate")
+//    private LocalDateTime registrationDate;
+//
+//    @ManyToOne(cascade= CascadeType.MERGE)
+//    @JoinColumn(name="levelid")
+//    private LevelEntity experience;
     @JsonIgnore
     @OneToMany(mappedBy="participantone", fetch= FetchType.EAGER)
     private Set<com.chat.model.entity.ChatEntity> chatsOne = new HashSet<>();
@@ -58,55 +58,55 @@ public class UserEntity {
     @OneToMany(mappedBy="sender", fetch= FetchType.EAGER)
     private Set<MessageEntity> messages = new HashSet<>();
 
-    @JsonIgnore
-    @Column(name = "verify")
-    private boolean verified;
-
-    @JsonIgnore
-    @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
-    @JoinTable(name="user_companies",
-            joinColumns=@JoinColumn (name="userid"),
-            inverseJoinColumns=@JoinColumn(name="companyid"))
-    @JsonManagedReference
-    private Set<com.chat.model.entity.CompanyEntity> companies = new HashSet<>();
-
-    @JsonIgnore
-    @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
-    @JoinTable(name="user_professions",
-            joinColumns=@JoinColumn (name="userid"),
-            inverseJoinColumns=@JoinColumn(name="professionid"))
-    @JsonManagedReference
-    private Set<com.chat.model.entity.ProfessionEntity> professions = new HashSet<>();
-
-    @JsonIgnore
-    @Column(name = "code")
-    private String confirmationCode;
-
-    @JsonIgnore
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-    @Column(name = "codesentat")
-    private LocalDateTime confirmationCodeSentAt;
-
-    public void addProfession(com.chat.model.entity.ProfessionEntity profession) {
-        this.professions.add(profession);
-        profession.getUsers().add(this);
-    }
-
-    public void removeProfession(ProfessionEntity profession) {
-        this.professions.remove(profession);
-        profession.getUsers().remove(this);
-        System.out.println("remove" + profession);
-    }
-
-    public void addCompany(com.chat.model.entity.CompanyEntity company) {
-        this.companies.add(company);
-        company.getUsers().add(this);
-    }
-
-    public void removeCompany(CompanyEntity company) {
-        this.companies.remove(company);
-        company.getUsers().remove(this);
-    }
+//    @JsonIgnore
+//    @Column(name = "verify")
+//    private boolean verified;
+//
+//    @JsonIgnore
+//    @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
+//    @JoinTable(name="user_companies",
+//            joinColumns=@JoinColumn (name="userid"),
+//            inverseJoinColumns=@JoinColumn(name="companyid"))
+//    @JsonManagedReference
+//    private Set<com.chat.model.entity.CompanyEntity> companies = new HashSet<>();
+//
+//    @JsonIgnore
+//    @ManyToMany(fetch = FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
+//    @JoinTable(name="user_professions",
+//            joinColumns=@JoinColumn (name="userid"),
+//            inverseJoinColumns=@JoinColumn(name="professionid"))
+//    @JsonManagedReference
+//    private Set<com.chat.model.entity.ProfessionEntity> professions = new HashSet<>();
+//
+//    @JsonIgnore
+//    @Column(name = "code")
+//    private String confirmationCode;
+//
+//    @JsonIgnore
+//    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+//    @Column(name = "codesentat")
+//    private LocalDateTime confirmationCodeSentAt;
+//
+//    public void addProfession(com.chat.model.entity.ProfessionEntity profession) {
+//        this.professions.add(profession);
+//        profession.getUsers().add(this);
+//    }
+//
+//    public void removeProfession(ProfessionEntity profession) {
+//        this.professions.remove(profession);
+//        profession.getUsers().remove(this);
+//        System.out.println("remove" + profession);
+//    }
+//
+//    public void addCompany(com.chat.model.entity.CompanyEntity company) {
+//        this.companies.add(company);
+//        company.getUsers().add(this);
+//    }
+//
+//    public void removeCompany(CompanyEntity company) {
+//        this.companies.remove(company);
+//        company.getUsers().remove(this);
+//    }
 
 
 //    @JsonIgnore

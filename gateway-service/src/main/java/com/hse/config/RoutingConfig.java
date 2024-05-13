@@ -32,10 +32,10 @@ public class RoutingConfig {
                         .uri("http://interview-server:8084"))
                 .route(r -> r.path("/ws/chat/**")
                         .filters(f -> f.filter(addAuthHeader())) // WebSocket route
-                        .uri("ws://localhost:8085"))
+                        .uri("ws://chat-server:8085"))
                 .route(r -> r.path("/chat/**")
                         .filters(f -> f.filter(addAuthHeader()))
-                        .uri("http://localhost:8085"))
+                        .uri("http://chat-server:8085"))
                 .build();
     }
 

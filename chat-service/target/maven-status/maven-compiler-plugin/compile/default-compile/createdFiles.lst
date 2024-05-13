@@ -1,13 +1,11 @@
 com/chat/security/jwt/JwtHandshakeInterceptor.class
 com/chat/model/response/MessageResponse.class
-com/chat/model/entity/LevelEntity.class
 com/chat/exception/ErrorMessage.class
 com/chat/repo/UserRepository.class
 com/chat/security/services/UserDetailsImpl.class
 com/chat/security/jwt/AuthEntryPointJwt.class
 com/chat/model/response/ChatResponse.class
 com/chat/repo/ChatRepository.class
-com/chat/model/entity/CompanyEntity.class
 com/chat/security/jwt/JwtUtils.class
 com/chat/exception/ExceptionMapper.class
 com/chat/ChatService.class
@@ -29,6 +27,5 @@ com/chat/security/services/UserDetailsServiceImpl.class
 com/chat/model/entity/ChatEntity.class
 com/chat/exception/BusinessException.class
 com/chat/controller/ChatController.class
-com/chat/model/entity/ProfessionEntity.class
 com/chat/repo/MessageRepository.class
 com/chat/security/WebSocketAuthInterceptor.class
