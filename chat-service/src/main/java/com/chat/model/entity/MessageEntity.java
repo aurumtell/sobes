@@ -35,6 +35,9 @@ public class MessageEntity {
     @Column(name = "datemessage")
     private LocalDateTime date;
 
+    @Column(name = "isread")
+    private boolean isRead;
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

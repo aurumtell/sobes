@@ -11,16 +11,6 @@ services:
     networks:
       - sobes-net
 
-  chat-server:
-    build:
-      context: chat-service/
-      dockerfile: build/Dockerfile
-    image: chat-server:latest
-    ports:
-      - 8085:8085
-    networks:
-      - sobes-net
-
   content-server:
     build:
       context: content-service/
@@ -38,6 +28,16 @@ services:
     image: interview-server:latest
     ports:
       - 8084:8084
+    networks:
+      - sobes-net
+
+  chat-server:
+    build:
+      context: chat-service/
+      dockerfile: build/Dockerfile
+    image: chat-server:latest
+    ports:
+      - 8085:8085
     networks:
       - sobes-net
 

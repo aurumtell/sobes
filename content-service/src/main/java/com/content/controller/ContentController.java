@@ -10,6 +10,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -43,6 +44,7 @@ public class ContentController {
             description = "Create Article")
     @PostMapping(value = "/user/article")
     @ResponseBody
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     public ArticleResponse createArticle(@RequestBody ArticleRequest article){
         return articleAdviseService.createArticle(article);
     }
@@ -51,6 +53,7 @@ public class ContentController {
             description = "Create advise")
     @PostMapping(value = "/user/advise")
     @ResponseBody
+    @PreAuthorize("hasRole('ROLE_ADMIN')")
     public AdviseResponse createAdvise(@RequestBody AdviseRequest advise){
         return articleAdviseService.createAdvise(advise);
     }

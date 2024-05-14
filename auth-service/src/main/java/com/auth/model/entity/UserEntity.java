@@ -72,6 +72,10 @@ public class UserEntity {
     @Column(name = "codesentat")
     private LocalDateTime confirmationCodeSentAt;
 
+    @ManyToOne(cascade= CascadeType.MERGE)
+    @JoinColumn(name = "roleid")
+    private RoleEntity role;
+
     public void addProfession(ProfessionEntity profession) {
         this.professions.add(profession);
         profession.getUsers().add(this);

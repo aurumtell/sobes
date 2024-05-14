@@ -22,6 +22,7 @@
 /Users/d.a.tasbauova/IdeaProjects/sobes/chat-service/src/main/java/com/chat/model/response/MessageResponse.java
 /Users/d.a.tasbauova/IdeaProjects/sobes/chat-service/src/main/java/com/chat/model/response/ChatResponse.java
 /Users/d.a.tasbauova/IdeaProjects/sobes/chat-service/src/main/java/com/chat/controller/WebSocketController.java
+/Users/d.a.tasbauova/IdeaProjects/sobes/chat-service/src/main/java/com/chat/config/TransactionConfig.java
 /Users/d.a.tasbauova/IdeaProjects/sobes/chat-service/src/main/java/com/chat/security/OpenApiConfig.java
 /Users/d.a.tasbauova/IdeaProjects/sobes/chat-service/src/main/java/com/chat/model/request/Message.java
 /Users/d.a.tasbauova/IdeaProjects/sobes/chat-service/src/main/java/com/chat/security/WebSecurityConfig.java

@@ -13,6 +13,21 @@
         </sql>
     </changeSet>
 
+    <changeSet id="user-role-table-creation" author="dayana">
+        <sql>
+            CREATE TABLE IF NOT EXISTS roles (
+                                                 id SERIAL PRIMARY KEY,
+                                                 role_user VARCHAR(50) NOT NULL
+                )
+        </sql>
+    </changeSet>
+    <changeSet id="default-user-role-creation" author="dayana">
+        <sql>
+            INSERT INTO roles (role_user) VALUES('ROLE_ADMIN');
+            INSERT INTO roles (role_user) VALUES('ROLE_USER');
+        </sql>
+    </changeSet>
+
     <!-- ChangeSet for creating the Users table -->
     <changeSet id="2023-01-user-table-creation" author="dayana">
         <sql>
@@ -26,8 +41,16 @@
                 code VARCHAR(225),
                 codeSentAt TIMESTAMP(0) WITHOUT TIME ZONE,
                 verify BOOLEAN,
+                roleId INTEGER,
+                FOREIGN KEY (roleId) REFERENCES roles(id),
                 FOREIGN KEY (levelId) REFERENCES levels(id)
                 );
+        </sql>
+    </changeSet>
+
+    <changeSet id="default-user-creation" author="dayana">
+        <sql>
+            INSERT INTO users (email, roleId, verify) VALUES('barbashina015@mail.ru',1, false);
         </sql>
     </changeSet>
 
@@ -227,6 +250,7 @@
                                                     chatId INTEGER NOT NULL,
                                                     senderId INTEGER NOT NULL,
                                                     content TEXT,
+                                                    isRead BOOLEAN,
                                                     dateMessage TIMESTAMP(0) WITHOUT TIME ZONE DEFAULT NOW(),
                 FOREIGN KEY (chatId) REFERENCES chats(id),
                 FOREIGN KEY (senderId) REFERENCES users(id)

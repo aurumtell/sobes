@@ -12,7 +12,6 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import static org.springframework.security.config.Elements.JWT;
 
 @SpringBootApplication
-@EnableJpaRepositories("com.auth.repo")
 @Configuration
 @EntityScan("com.auth")
 @SecurityScheme(name = "Authorization", scheme = "bearer", type = SecuritySchemeType.HTTP, in = SecuritySchemeIn.HEADER, bearerFormat = JWT)

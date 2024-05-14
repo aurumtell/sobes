@@ -6,6 +6,7 @@ com/chat/security/services/UserDetailsImpl.class
 com/chat/security/jwt/AuthEntryPointJwt.class
 com/chat/model/response/ChatResponse.class
 com/chat/repo/ChatRepository.class
+com/chat/config/TransactionConfig.class
 com/chat/security/jwt/JwtUtils.class
 com/chat/exception/ExceptionMapper.class
 com/chat/ChatService.class

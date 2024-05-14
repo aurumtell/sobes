@@ -13,7 +13,6 @@ import static org.springframework.security.config.Elements.JWT;
 
 @SpringBootApplication
 @SecurityScheme(name = "Authorization", scheme = "bearer", type = SecuritySchemeType.HTTP, in = SecuritySchemeIn.HEADER, bearerFormat = JWT)
-@EnableJpaRepositories("com.chat.repo")
 @Configuration
 @EntityScan("com.chat")
 public class ChatService {

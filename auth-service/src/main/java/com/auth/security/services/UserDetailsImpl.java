@@ -5,9 +5,11 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import java.util.Collection;
+import java.util.List;
 import java.util.Objects;
 
 @Getter
@@ -19,28 +21,31 @@ public class UserDetailsImpl implements UserDetails {
     private String username;
 
     private String email;
+    private Collection<? extends GrantedAuthority> authorities;
 
     @JsonIgnore
     private String password;
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return null;
+        return authorities;
     }
 
-    public UserDetailsImpl(Long id, String email, String password, String username) {
+    public UserDetailsImpl(Long id, String email, String password, Collection<? extends GrantedAuthority> authorities) {
         this.id = id;
         this.email = email;
         this.password = password;
-        this.username = username;
+        this.authorities = authorities;
     }
 
     public static UserDetailsImpl build(UserEntity user) {
+        List<GrantedAuthority> authorities = List.of(new SimpleGrantedAuthority(user.getRole().getRole()));
+
         return new UserDetailsImpl(
                 user.getId(),
                 user.getEmail(),
                 user.getPasswordHash(),
-                user.getUsername());
+                authorities);
     }
 
     @Override

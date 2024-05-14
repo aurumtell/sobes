@@ -9,6 +9,7 @@
 /Users/d.a.tasbauova/IdeaProjects/sobes/auth-service/src/main/java/com/auth/model/response/ProfileResponse.java
 /Users/d.a.tasbauova/IdeaProjects/sobes/auth-service/src/main/java/com/auth/model/request/ProfileRequest.java
 /Users/d.a.tasbauova/IdeaProjects/sobes/auth-service/src/main/java/com/auth/exception/ExpiredJwtException.java
+/Users/d.a.tasbauova/IdeaProjects/sobes/auth-service/src/main/java/com/auth/repo/RoleRepository.java
 /Users/d.a.tasbauova/IdeaProjects/sobes/auth-service/src/main/java/com/auth/ProfileService.java
 /Users/d.a.tasbauova/IdeaProjects/sobes/auth-service/src/main/java/com/auth/model/request/EmailRequest.java
 /Users/d.a.tasbauova/IdeaProjects/sobes/auth-service/src/main/java/com/auth/model/response/MessageResponse.java
@@ -25,6 +26,7 @@
 /Users/d.a.tasbauova/IdeaProjects/sobes/auth-service/src/main/java/com/auth/security/jwt/AuthTokenFilter.java
 /Users/d.a.tasbauova/IdeaProjects/sobes/auth-service/src/main/java/com/auth/model/entity/RefreshToken.java
 /Users/d.a.tasbauova/IdeaProjects/sobes/auth-service/src/main/java/com/auth/model/entity/LevelEntity.java
+/Users/d.a.tasbauova/IdeaProjects/sobes/auth-service/src/main/java/com/auth/security/TransactionConfig.java
 /Users/d.a.tasbauova/IdeaProjects/sobes/auth-service/src/main/java/com/auth/model/request/SignUpRequest.java
 /Users/d.a.tasbauova/IdeaProjects/sobes/auth-service/src/main/java/com/auth/model/request/VerificationRequest.java
 /Users/d.a.tasbauova/IdeaProjects/sobes/auth-service/src/main/java/com/auth/exception/ErrorMessage.java
@@ -39,6 +41,7 @@
 /Users/d.a.tasbauova/IdeaProjects/sobes/auth-service/src/main/java/com/auth/service/UserService.java
 /Users/d.a.tasbauova/IdeaProjects/sobes/auth-service/src/main/java/com/auth/security/services/UserDetailsServiceImpl.java
 /Users/d.a.tasbauova/IdeaProjects/sobes/auth-service/src/main/java/com/auth/exception/AuthorizationException.java
+/Users/d.a.tasbauova/IdeaProjects/sobes/auth-service/src/main/java/com/auth/model/entity/RoleEntity.java
 /Users/d.a.tasbauova/IdeaProjects/sobes/auth-service/src/main/java/com/auth/model/entity/UserEntity.java
 /Users/d.a.tasbauova/IdeaProjects/sobes/auth-service/src/main/java/com/auth/repo/ProfessionRepository.java
 /Users/d.a.tasbauova/IdeaProjects/sobes/auth-service/src/main/java/com/auth/model/entity/CompanyEntity.java

@@ -19,6 +19,7 @@ public class AnswerResponse {
     private Integer completeness;
     private Integer satisfaction;
     private Double score;
+    private String answer;
 
     public AnswerResponse(AnswerEntity answerEntity) {
         this.id = answerEntity.getId();
@@ -26,6 +27,7 @@ public class AnswerResponse {
         this.completeness = answerEntity.getCompleteness();
         this.satisfaction = answerEntity.getSatisfaction();
         this.score = answerEntity.getScore();
+        this.answer = answerEntity.getContent();
     }
 
     public List<AnswerResponse> getListAnswerResponses(List<AnswerEntity> answerEntities) {

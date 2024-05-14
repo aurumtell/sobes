@@ -7,8 +7,11 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.experimental.Accessors;
 
+import javax.management.relation.Role;
 import java.time.LocalDateTime;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -37,6 +40,10 @@ public class UserEntity {
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Column(name = "registrationdate")
     private LocalDateTime registrationDate;
+
+    @ManyToOne(cascade= CascadeType.MERGE)
+    @JoinColumn(name = "roleid")
+    private RoleEntity role;
 
 //    @ManyToMany(mappedBy = "savedUsers", fetch= FetchType.EAGER, cascade = {CascadeType.MERGE, CascadeType.PERSIST})
 //    private Set<MaterialEntity> savedMaterials;

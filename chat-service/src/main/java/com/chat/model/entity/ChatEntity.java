@@ -28,7 +28,7 @@ public class ChatEntity {
     private UserEntity participanttwo;
 
     @JsonIgnore
-    @OneToMany(mappedBy="chat", fetch= FetchType.EAGER)
+    @OneToMany(mappedBy="chat", fetch= FetchType.LAZY)
     private Set<MessageEntity> messages = new HashSet<>();
 
     @Override

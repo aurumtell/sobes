@@ -19,6 +19,7 @@ import org.springframework.util.StringUtils;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
+import java.util.List;
 
 @Component
 public class AuthTokenFilter extends OncePerRequestFilter {
@@ -40,10 +41,10 @@ public class AuthTokenFilter extends OncePerRequestFilter {
                 System.out.println("filter");
                 System.out.println(email);
                 UserDetails userDetails = userDetailsServiceImpl.loadUserByUsername(email);
+
                 UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(
                         userDetails, null, userDetails.getAuthorities());
                 authentication.setDetails(new WebAuthenticationDetailsSource().buildDetails(request));
-
                 SecurityContextHolder.getContext().setAuthentication(authentication);
             }
         } catch (Exception e) {

@@ -8,4 +8,5 @@ import java.util.List;
 
 public interface MessageRepository extends JpaRepository<MessageEntity, Long> {
     List<MessageEntity> findByChat(ChatEntity chat);
+    void deleteByChat(ChatEntity chat);
 }

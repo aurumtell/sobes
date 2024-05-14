@@ -42,7 +42,7 @@
     // }
 
     function connect() {
-        var socket = new WebSocket('ws://localhost:8086/ws/chat'); // Убедитесь, что используете WebSocket без SockJS, если убрали SockJS из конфигурации сервера
+        var socket = new WebSocket('ws://localhost:8080/ws/chat'); // Убедитесь, что используете WebSocket без SockJS, если убрали SockJS из конфигурации сервера
         stompClient = Stomp.over(socket);
         var jwtToken = document.getElementById('jwtToken').value;
         stompClient.connect({'Authorization': 'Bearer ' + jwtToken}, function (frame) {

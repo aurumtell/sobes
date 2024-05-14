@@ -1,11 +1,13 @@
 package com.chat.controller;
 
 import com.chat.model.entity.ChatEntity;
+import com.chat.model.entity.MessageEntity;
 import com.chat.model.response.MessageResponse;
 import com.chat.security.services.UserDetailsImpl;
 import com.chat.service.MessageService;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
 import org.springframework.web.bind.annotation.*;
 
@@ -45,4 +47,19 @@ public class ChatController {
     public List<ChatEntity> getChats(@AuthenticationPrincipal UserDetailsImpl user) {
         return messageService.getChats(user);
     }
+
+    @PostMapping("/chat/read")
+    @ResponseBody
+    public List<MessageEntity> markMessagesAsRead(@RequestBody List<Long> messageIds) {
+        return messageService.markMessagesAsRead(messageIds);
+    }
+
+    @DeleteMapping("/chat/{chatId}")
+    public ResponseEntity<?> deleteChat(@PathVariable Long chatId) {
+        try {
+            Long deletedChatId = messageService.deleteChat(chatId);
+            return ResponseEntity.ok("Chat with ID " + deletedChatId + " has been deleted.");
+        } catch (IllegalArgumentException e) {
+            return ResponseEntity.badRequest().body(e.getMessage());
+        }    }
 }

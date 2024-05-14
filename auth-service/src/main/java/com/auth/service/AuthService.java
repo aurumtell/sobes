@@ -4,6 +4,7 @@ import com.auth.exception.AuthorizationException;
 import com.auth.exception.BusinessException;
 import com.auth.exception.MyEntityNotFoundException;
 import com.auth.model.entity.LevelEntity;
+import com.auth.model.entity.RoleEntity;
 import com.auth.model.request.EmailRequest;
 import com.auth.model.request.ResetRequest;
 import com.auth.model.response.MessageResponse;
@@ -12,6 +13,7 @@ import com.auth.model.entity.UserEntity;
 import com.auth.model.request.AuthRequest;
 import com.auth.model.request.SignUpRequest;
 import com.auth.model.response.JwtResponse;
+import com.auth.repo.RoleRepository;
 import com.auth.repo.UserRepository;
 import com.auth.security.jwt.JwtUtils;
 import com.auth.security.services.UserDetailsImpl;
@@ -26,6 +28,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import javax.management.relation.RoleResult;
 import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.UUID;
@@ -34,6 +37,9 @@ import java.util.UUID;
 public class AuthService {
     @Autowired
     UserRepository userRepository;
+
+    @Autowired
+    RoleRepository roleRepository;
 
     @Autowired
     AuthenticationManager authenticationManager;
@@ -75,6 +81,9 @@ public class AuthService {
         System.out.println(user.getRegistrationDate());
         user.setProfessions(new HashSet<>());
         user.setCompanies(new HashSet<>());
+        if (user.getRole() == null) {
+            user.setRole(roleRepository.findByRole("ROLE_USER").get());
+        }
         userRepository.save(user);
         return authenticateUser(new AuthRequest(user.getEmail(), signUpRequest.getPassword()));
     }
@@ -92,6 +101,7 @@ public class AuthService {
         if (user.getConfirmationCode().equals(code) &&
                 user.getConfirmationCodeSentAt().isAfter(LocalDateTime.now().minusMinutes(15))) {
             user.setVerified(true);
+            System.out.println("set true");
             userRepository.save(user);
             return ResponseEntity.ok().body(new MessageResponse("Email successfully verified!"));
         } else {
@@ -105,15 +115,20 @@ public class AuthService {
     }
 
     public ResponseEntity<?> registerEmail(EmailRequest emailRequest) {
+        System.out.println(userRepository.existsByEmail(emailRequest.getEmail()));
         if (userRepository.existsByEmail(emailRequest.getEmail())) {
             if (userRepository.findByEmail(emailRequest.getEmail()).get().isVerified()) {
                 return ResponseEntity
                         .badRequest()
                         .body(new MessageResponse("Error: Email is already taken!"));
+            } else {
+                createAndSendConfirmationCode(userRepository.findByEmail(emailRequest.getEmail()).get());
+                return ResponseEntity.ok().body(new MessageResponse("Email message sent successfully!"));
             }
         }
         UserEntity user = new UserEntity();
         user.setEmail(emailRequest.getEmail());
+//        user.setRole(roleRepository.findByRole("ROLE_USER").get());
         createAndSendConfirmationCode(user);
         return ResponseEntity.ok().body(new MessageResponse("Email message sent successfully!"));
     }
