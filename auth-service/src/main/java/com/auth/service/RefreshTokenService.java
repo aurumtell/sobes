@@ -4,9 +4,12 @@ import com.auth.exception.TokenRefreshException;
 import com.auth.model.entity.RefreshToken;
 import com.auth.repo.RefreshRepository;
 import com.auth.repo.UserRepository;
+import com.auth.security.services.UserDetailsImpl;
 import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import java.time.Instant;
@@ -53,5 +56,12 @@ public class RefreshTokenService {
     @Transactional
     public int deleteByUserId(Long userId) {
         return refreshTokenRepository.deleteByUser(userRepository.findById(userId).get());
+    }
+
+    @Transactional
+    public ResponseEntity<?> logout(UserDetailsImpl user) {
+        SecurityContextHolder.clearContext();
+        deleteByUserId(user.getId());
+        return ResponseEntity.ok("Logout successful");
     }
 }

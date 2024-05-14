@@ -26,6 +26,7 @@ public class ProfileResponse {
     private String level;
     private List<String> professions;
     private List<String> companies;
+    private String role;
 
 //    public static ProfileResponse toProfile(UserEntity user, ) {
 //        ModelMapper modelMapper = new ModelMapper();
@@ -43,6 +44,7 @@ public class ProfileResponse {
         }
         this.professions = user.getProfessions().stream().map(ProfessionEntity::getProfession).collect(Collectors.toList());
         this.companies = user.getCompanies().stream().map(CompanyEntity::getCompany).collect(Collectors.toList());
+        this.role = user.getRole().getRole();
     }
 
     public static List<ProfileResponse> toProfileList(List<UserEntity> userEntities) {

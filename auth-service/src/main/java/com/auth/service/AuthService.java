@@ -67,7 +67,7 @@ public class AuthService {
         RefreshToken refreshToken = refreshTokenService.createRefreshToken(userDetails.getId());
         System.out.println(userDetails.getUsername());
         return ResponseEntity.ok(new JwtResponse(jwt, refreshToken.getToken(), userDetails.getId(),
-                userDetails.getEmail(), userDetails.getUsername()));
+                userDetails.getEmail(), userDetails.getUsername(), userDetails.getAuthorities().toString()));
     }
 
     public ResponseEntity<?> registerUser(SignUpRequest signUpRequest) {
