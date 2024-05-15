@@ -4,6 +4,7 @@ com/auth/model/request/SignUpRequest.class
 com/auth/model/request/ResetRequest.class
 com/auth/repo/ProfessionRepository.class
 com/auth/repo/CompanyRepository.class
+com/auth/repo/FeedbackRepository.class
 com/auth/controller/AuthController.class
 com/auth/service/EmailService.class
 com/auth/security/services/UserDetailsServiceImpl.class
@@ -34,10 +35,14 @@ com/auth/exception/ErrorMessage.class
 com/auth/service/RefreshTokenService.class
 com/auth/service/AuthService.class
 com/auth/controller/UserController.class
+com/auth/model/request/FeedbackRequest.class
+com/auth/service/FeedbackService.class
+com/auth/model/entity/FeedbackEntity.class
 com/auth/repo/UserRepository.class
 com/auth/security/jwt/AuthTokenFilter.class
 com/auth/exception/MyEntityNotFoundException.class
 com/auth/exception/ExceptionMapper.class
+com/auth/controller/FeedbackController.class
 com/auth/ProfileService.class
 com/auth/model/response/TokenRefreshResponse.class
 com/auth/model/request/VerificationRequest.class

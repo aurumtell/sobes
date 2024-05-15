@@ -22,6 +22,8 @@ public class FeedbackService {
     public FeedbackEntity saveFeedback(Long userId, String content) {
         FeedbackEntity feedback = new FeedbackEntity();
         feedback.setUser(userRepository.findById(userId).get());
+        System.out.println(userRepository.findById(userId).get());
+        System.out.println(feedback.getUser().getId());
         feedback.setContent(content);
         return feedbackRepository.save(feedback);
     }

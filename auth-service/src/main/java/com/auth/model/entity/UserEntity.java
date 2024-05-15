@@ -1,6 +1,7 @@
 package com.auth.model.entity;
 
 import com.auth.model.entity.LevelEntity;
+import com.auth.service.FeedbackService;
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -34,12 +35,14 @@ public class UserEntity {
     private String email;
 
 
+    @JsonIgnore
     @Column(name = "passwordhash", unique = true)
     private String passwordHash;
 
     @Column(name = "username")
     private String username;
 
+    @JsonIgnore
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Column(name = "registrationdate")
     private LocalDateTime registrationDate;
@@ -65,9 +68,11 @@ public class UserEntity {
     @JsonManagedReference
     private Set<ProfessionEntity> professions = new HashSet<>();
 
+    @JsonIgnore
     @Column(name = "code")
     private String confirmationCode;
 
+    @JsonIgnore
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss")
     @Column(name = "codesentat")
     private LocalDateTime confirmationCodeSentAt;
@@ -75,6 +80,10 @@ public class UserEntity {
     @ManyToOne(cascade= CascadeType.MERGE)
     @JoinColumn(name = "roleid")
     private RoleEntity role;
+
+    @JsonIgnore
+    @OneToMany(mappedBy="user", fetch= FetchType.EAGER)
+    private Set<FeedbackEntity> feedbacks;
 
     public void addProfession(ProfessionEntity profession) {
         this.professions.add(profession);

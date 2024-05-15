@@ -24,8 +24,8 @@ public class FeedbackEntity {
     @Column(name = "created_at")
     private LocalDateTime createdAt = LocalDateTime.now();
 
-    @ManyToOne(optional = false, cascade = CascadeType.MERGE)
-    @JoinColumn(name = "user_id", insertable = false, updatable = false)
+    @ManyToOne(cascade = CascadeType.MERGE)
+    @JoinColumn(name = "user_id")
     private UserEntity user;
 
     // Add other necessary fields, getters, setters, and constructors
