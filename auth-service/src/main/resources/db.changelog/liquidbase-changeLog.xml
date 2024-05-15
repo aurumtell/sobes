@@ -51,6 +51,7 @@
     <changeSet id="default-user-creation" author="dayana">
         <sql>
             INSERT INTO users (email, roleId, verify) VALUES('barbashina015@mail.ru',1, false);
+            INSERT INTO users (email, roleId, verify) VALUES('alisavy2010@gmail.com',1, false);
         </sql>
     </changeSet>
 
@@ -258,4 +259,15 @@
         </sql>
     </changeSet>
 
+    <changeSet id="2024-05-feedbacks-table-creation" author="dayana">
+        <sql>
+            CREATE TABLE IF NOT EXISTS feedbacks (
+                                                     id SERIAL PRIMARY KEY,
+                                                     user_id INTEGER NOT NULL,
+                                                     content TEXT NOT NULL,
+                                                     created_at TIMESTAMP(0) WITHOUT TIME ZONE DEFAULT NOW(),
+                FOREIGN KEY (user_id) REFERENCES users(id)
+                );
+        </sql>
+    </changeSet>
 </databaseChangeLog>

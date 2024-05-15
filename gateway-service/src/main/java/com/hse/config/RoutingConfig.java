@@ -15,6 +15,8 @@ public class RoutingConfig {
         return builder.routes()
                 .route(r -> r.path("/auth/**")
                         .uri("http://auth-server:8082"))
+                .route(r -> r.path("/feedback")
+                        .uri("http://auth-server:8082"))
                 .route(r -> r.path("/user/article/**")
                         .filters(f -> f.filter(addAuthHeader()))
                         .uri("http://content-server:8083"))
