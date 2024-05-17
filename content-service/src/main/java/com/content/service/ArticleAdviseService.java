@@ -1,6 +1,7 @@
 package com.content.service;
 
 
+import com.content.exception.MyEntityNotFoundException;
 import com.content.model.entity.AdviseEntity;
 import com.content.model.request.AdviseRequest;
 import com.content.model.request.ArticleRequest;
@@ -52,7 +53,7 @@ public class ArticleAdviseService {
 
     public ArticleResponse getArticleById(Long articleId) {
 
-        ArticleEntity article = articleRepository.findById(articleId).get();
+        ArticleEntity article = articleRepository.findById(articleId).orElseThrow(() -> new MyEntityNotFoundException("Article"));;
         return new ArticleResponse(article);
     }
 

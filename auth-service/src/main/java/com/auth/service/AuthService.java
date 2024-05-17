@@ -61,11 +61,11 @@ public class AuthService {
                 new UsernamePasswordAuthenticationToken(emailRequest.getEmail(), emailRequest.getPassword()));
         SecurityContextHolder.getContext().setAuthentication(authentication);
         String jwt = jwtUtils.generateJwtToken(authentication);
-        System.out.println("authenticateUser");
+
         UserDetailsImpl userDetails = (UserDetailsImpl) authentication.getPrincipal();
-        System.out.println("до create Refresh");
+
         RefreshToken refreshToken = refreshTokenService.createRefreshToken(userDetails.getId());
-        System.out.println(userDetails.getUsername());
+
         return ResponseEntity.ok(new JwtResponse(jwt, refreshToken.getToken(), userDetails.getId(),
                 userDetails.getEmail(), userDetails.getUsername(), userDetails.getAuthorities().toString()));
     }
@@ -78,7 +78,7 @@ public class AuthService {
         user.setUsername(signUpRequest.getUsername());
         user.setPasswordHash(encoder.encode(signUpRequest.getPassword()));
         user.setRegistrationDate(LocalDateTime.now());
-        System.out.println(user.getRegistrationDate());
+
         user.setProfessions(new HashSet<>());
         user.setCompanies(new HashSet<>());
         if (user.getRole() == null) {
@@ -101,7 +101,7 @@ public class AuthService {
         if (user.getConfirmationCode().equals(code) &&
                 user.getConfirmationCodeSentAt().isAfter(LocalDateTime.now().minusMinutes(15))) {
             user.setVerified(true);
-            System.out.println("set true");
+
             userRepository.save(user);
             return ResponseEntity.ok().body(new MessageResponse("Email successfully verified!"));
         } else {

@@ -20,17 +20,6 @@ public class ChatController {
     @Autowired
     MessageService messageService;  // Сервис для работы с сообщениями
 
-//    @MessageMapping("/chat")
-//    @SendTo("/topic/messages/{chatId}")
-//    public MessageResponse sendMessage(@DestinationVariable Long chatId, Message message) {
-//        return messageService.sendMessage(chatId, message);
-//    }
-//
-//    @MessageMapping("/chat/read")
-//    public void markMessagesAsRead(@Payload Long messageId) {
-//        messageService.markMessagesAsRead(messageId);
-//    }
-
     @PostMapping(value = "/chat/{userId}")
     @ResponseBody
     public ChatEntity createChat(@PathVariable Long userId, @AuthenticationPrincipal UserDetailsImpl user) {

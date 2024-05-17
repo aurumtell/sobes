@@ -1,6 +1,7 @@
 package com.chat.service;
 
 import com.chat.exception.BusinessException;
+import com.chat.exception.MyEntityNotFoundException;
 import com.chat.model.entity.ChatEntity;
 import com.chat.model.entity.MessageEntity;
 import com.chat.model.entity.UserEntity;
@@ -44,7 +45,7 @@ public class MessageService {
         UserEntity participantOne = userRepository.findById(user.getId()).get();
         System.out.println(user.getId());
         System.out.println(participantOne);
-        UserEntity participantTwo = userRepository.findById(userId).get();
+        UserEntity participantTwo = userRepository.findById(userId).orElseThrow(() -> new MyEntityNotFoundException("user"));
         if (chatRepository.existsByParticipantoneAndParticipanttwo(participantOne, participantTwo)) {
             throw new BusinessException("Chat already exists!");
         }

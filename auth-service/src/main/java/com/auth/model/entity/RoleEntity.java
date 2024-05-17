@@ -32,6 +32,9 @@ public class RoleEntity {
     @OneToMany(mappedBy="role", fetch= FetchType.EAGER)
     private Set<UserEntity> users;
 
-    public RoleEntity(String roleUser) {
+    public RoleEntity(Long id, @NotNull String role) {
+        this.id = id;
+        this.role = role;
     }
+
 }

@@ -108,7 +108,7 @@ public class UserService {
     }
 
     public ProfileResponse getProfileById(Long userId) {
-        UserEntity userEntity = userRepository.findById(userId).get();
+        UserEntity userEntity = userRepository.findById(userId).orElseThrow(() -> new MyEntityNotFoundException("Profile"));
         return new ProfileResponse(userEntity);
     }
 
